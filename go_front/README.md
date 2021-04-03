@@ -1,24 +1,11 @@
 # go_front
 
-## Project setup
+## Загрузка необходимых пиблиотек для запуска (необходим npm)
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Запуск виртуального сервера, для просмотра и тестирования приложения (Запускать после запуска Python-сервера)
 ```
 npm run serve
 ```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
