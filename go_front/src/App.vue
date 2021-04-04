@@ -3,7 +3,7 @@
         <v-main class="text-center ma-auto" style="width: 1000px">
 			<v-alert class="text-left" border="bottom" color="red" type="error" :value='alert'>К сожалению, данная игра скрыта настройками приватности</v-alert>
 			<TopTable :players="playerses" v-on:clickValue="getGame($event)" v-if="flag1"/>
-            <viewGame :players="players" :items="items" :value="value" :max="max" :time='move' v-on:changeValue="change($event)" v-on:goBack="changeFlags($event)" v-if="flag">
+            <viewGame :players="players" :items="items" :value="value" :max="max - 1" :time='move' v-on:changeValue="change($event)" v-on:goBack="changeFlags($event)" v-if="flag">
                 <goBoard ref="board" :size="size" :value="value" :moves="move"/>
             </viewGame>
         </v-main>
@@ -65,7 +65,6 @@ export default {
             this.$refs.board.updateBoard(this.value, this.move, this.size)
         },
 		getGame(url) {
-			console.log(url)
 			this.items = [
 				{
 					name: 'Информация',
